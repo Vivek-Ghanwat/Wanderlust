@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+  <div class="container-fluid navbar-shell">
+    <div class="nav-left d-flex align-items-center">
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+      <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/listings">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listings">Explore</a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="search-form" role="search">
+      <div class="search-shell">
+        <input class="search-input" type="search" placeholder="Search destinations" aria-label="Search destinations" />
+        <button class="btn search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+        </button>
+      </div>
+    </form>
+
+    <ul class="navbar-nav nav-right d-flex flex-row align-items-center">
+      <li class="nav-item">
+        <a class="nav-link" href="/listings/new">Airbnb your home</a>
+      </li>
+      <% if(!curruser){%>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/signup">SignUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+      <%} %>
+      <% if(curruser){%>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+      <%} %>
+    </ul>
+  </div>
+</nav>
